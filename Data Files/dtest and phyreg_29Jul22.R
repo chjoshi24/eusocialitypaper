@@ -209,7 +209,7 @@ data_hap2_pr_eus<-setNames(data_hap2_pr[,2],rownames(data_hap2_pr))
 
 #simmaps for haplodiploidy
 map_hap_ER2<-make.simmap(tree_hap2_pr,data_hap2_pr_hap,model="ER",nsim=100)
-map_hap_ARD2<-make.simmap(tree_hap2_pr,data_hap2_pr_hap,model="ARD",nsim=100)
+map_hap_ARD3<-make.simmap(tree_hap2_pr,data_hap2_pr_hap,model="ARD",nsim=100)
 
 #simmaps for eusociality
 map_eus_ARD2<-make.simmap(tree_hap2_pr,data_hap2_pr_eus,model="ARD",nsim=100)
@@ -239,4 +239,4 @@ map_eus_ARD3<-make.simmap(tree_hap3_pr,data_hap3_pr_eus,model="ARD",nsim=100)
 
 #Running D test
 dtest_ARD3<-Dtest(map_hap_ARD3,map_eus_ARD3,nsim=100)
-dtest_ER_ARD_3<-Dtest(map_hap_ARD3,map_eus_ER3,nsim=100)
+dtest_ER_ARD_4<-Dtest(map_hap_ARD3,map_eus_ER3,nsim=100)
