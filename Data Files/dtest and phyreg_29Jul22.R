@@ -220,4 +220,23 @@ dtest_ER_ARD_3<-Dtest(map_hap_ER2,map_eus_ARD2,nsim=100)
 
 #FOR THE DATASET WHERE THE BEETLE FAMILY THAT HAS EUSOCIALITY IS CONSIDERED AS DIPLODIPLOID
 
+tree_hap3_pr<-read.nexus("Datafile S1.nexus")
+data_hap3_pr<-read.csv("Datafile S5.csv",header=TRUE,row.names = 1)
 
+#Extracting the hapldoiploidy and eusociality with tips
+data_hap3_pr_hap<-setNames(data_hap3_pr[,1],rownames(data_hap3_pr))
+data_hap3_pr_eus<-setNames(data_hap3_pr[,2],rownames(data_hap3_pr))
+
+
+#Making simmaps first
+
+#simmaps for haplodiploidy
+map_hap_ARD3<-make.simmap(tree_hap3_pr,data_hap3_pr_hap,model="ARD",nsim=100)
+
+#simmaps for eusociality
+map_eus_ER3<-make.simmap(tree_hap3_pr,data_hap3_pr_eus,model="ARD",nsim=100)
+map_eus_ARD3<-make.simmap(tree_hap3_pr,data_hap3_pr_eus,model="ARD",nsim=100)
+
+#Running D test
+dtest_ARD3<-Dtest(map_hap_ARD3,map_eus_ARD3,nsim=100)
+dtest_ER_ARD_3<-Dtest(map_hap_ARD3,map_eus_ER3,nsim=100)
