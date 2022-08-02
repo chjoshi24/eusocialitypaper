@@ -241,3 +241,6 @@ dtest_ARD3<-Dtest(map_hap_ARD3,map_eus_ARD3,nsim=100)
 dtest_ER_ARD_4<-Dtest(map_hap_ARD3,map_eus_ER3,nsim=100)
 
 
+
+
+
