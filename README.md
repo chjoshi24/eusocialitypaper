@@ -1,5 +1,5 @@
 # Data files
-The data file folder contains the annotated R code, csv data files, phylogenetic tree file, and supplementary results for the for the evolution of eusociality paper.  
+The 'Data files' folder contains the annotated R code, csv data files, phylogenetic tree file, and supplementary results for the for the evolution of eusociality paper.  
 
 Paper link: https://www.frontiersin.org/articles/10.3389/fevo.2023.1118748/full
 
